@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Demo</title>
+	
+	<link href='https://fonts.googleapis.com/css?family=Exo+2:400,300,500,700,800' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.min.css">
+	<link rel="stylesheet" type="text/css" href="css/colorbox.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var w_ht = $(window).height();
+		var w_wd = $(window).width();
+		var h_ht = $(".navbar").height();
+		var f_ht = $(".footer").height();
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 1)
+			{
+				$('.navbar-fixed-top').addClass('addBg');
+				$('.navbar-brand img').css('width','200px')
+			} 
+			else
+			{
+				$('.navbar-fixed-top').removeClass('addBg');
+				$('.navbar-brand img').css('width','auto')
+			}
+		})
+		$('.main_hover_div').colorbox({rel:'main_hover_div'})		
+		$('.full_ht').css('height',w_ht);
+		var main_slider = $('.main_slider').bxSlider({
+			auto:true,
+			controls:false,
+			pager:false,
+		    pause:6000
+		})
+	});
+	</script>
+</head>
+<body>
+<div class="fullwrapper">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container" style="width:98%">
+      <a class="navbar-brand pull-left" href="#"><img src="images/logo.png"></a>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+         </div>
+        <div id="navbar" class="navbar-collapse collapse">
+        	   	<div class="enquire pull-right hidden-xs" style="">
+        	   		<div class="pull-right" style="margin-right: 12px;color:#fff;">&nbsp;Call:&nbsp;<span class="" style="">+91 44 6694 9100</span></div>
+	        		<div class="pull-right">
+						<div class="enquire_now" style="margin-right: 12px;"><span class="enq">enquire now</span>
+								<div class="enquire_toggle" style="display:none;">
+									<div id="form_fields">  
+										<p class="tac f14 white padding10-0">Please fill your details below</p>
+										<form accept-charset="UTF-8" action="/site/contact" id="contact_us" method="post">
+											<table style="width:100%; float:left;">			
+												<tr>									
+													<td class="f_rel2" > 
+														<input type="text" class="txtfield required bx" id="contact_name" placeholder="Name*" name="contact[name]" >
+													</td>							
+												</tr>
+												
+												<tr>									
+													<td class="f_rel2" > 
+														<input type="text" id="contact_email" name="contact[email]" value="" placeholder="Email*" class="txtfield required bx">
+														
+													</td>				
+												</tr>
+												
+												<tr>									
+													<td class="f_rel2" > 
+														<input type="text" class="txtfield number required bx" id="contact_phone" placeholder="Phone*" name="contact[phone]" >
+													</td>
+												</tr>
+												
+												<tr>									
+													<td class="f_rel2"  style="padding-bottom: 5px;"> 
+														<textarea type="text" class="txtfield  bx" id="contact_comments" placeholder="Comments" name="contact[comments]" ></textarea>
+													</td>							
+												</tr>
+												
+												<td colspan="2" style="text-align:center;"> 
+														<div >
+														<input type="submit" value="Submit" class="submit-btn" >
+														</div>
+													</td>
+											</table>				  
+										</form>	
+										<div class="close_icon pull-right">X</div>			
+									</div>
+									 
+									 <div id="form-success" style="display:none; font-size:12px;padding:5px; text-align:center; color:#fff; margin-top:20px" >
+											<span class="f12"><strong>Your request has been submitted successfully.</strong></span><br />
+											<span class="f12">We will get back to you soon.</span><br />
+									</div>	
+								</div>							
+						</div>
+					</div>
+				</div>
+			<div class="clr"></div>
+			<div class="menubar pull-right" style="">
+				<ul class="nav navbar-nav fw400" id="menu_nav">
+		            <li><a href="#overview" >Home</a></li>
+		            <li><a href="#overview" >About Us</a></li>
+		            <li><a href="#usps">Gallery</a></li>
+		            <li><a href="#about_us">Contact us</a></li>
+		       </ul>	
+          </div>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+    <div class="home_slider">
+    	<div class="main_slider1">
+    		<div class="slider1" stylr="height:300px"></div>	
+    	</div>
+    </div>
+    <div class="clr"></div>
+    <div class="inner_content pull-left w100 padding-ht">
+    	<div class="container">
+    		<div class="row text-center">
+    			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+    				<div class="inner_div">
+    					<div class="inner_div_img">
+    						<img src="images/icon1.png">
+    					</div>
+    					<div class="txt f15">
+    						<span>Personal Trainig</span><br/>
+    						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla sem ut nisl auctor, sit amet auctor tortor mollis. Aliquam nibh elit, tincidunt sit amet orci ac, pellentesque pretium mi.
+    					</div>
+    					<a class="home_buttons">meet our trainer</a>
+    				</div>
+    			</div>
+    			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+    				<div class="inner_div">
+    					<div class="inner_div_img">
+    						<img src="images/icon2.png">
+    					</div>
+    					<div class="txt f15">
+    						<span>Personal  Trainig</span><br/>
+    						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla sem ut nisl auctor, sit amet auctor tortor mollis. Aliquam nibh elit, tincidunt sit amet orci ac, pellentesque pretium mi.
+    					</div>
+    					<a class="home_buttons">specific program</a>
+    				</div>
+    			</div>
+    			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+    				<div class="inner_div">
+    					<div class="inner_div_img">
+    						<img src="images/icon3.png">
+    					</div>
+    					<div class="txt f15">
+    						<span>Personal Trainig</span><br/>
+    						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla sem ut nisl auctor, sit amet auctor tortor mollis. Aliquam nibh elit, tincidunt sit amet orci ac, pellentesque pretium mi.
+    					</div>
+    					<a class="home_buttons">view class</a>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</div>
+</body>
+</html>                                    1                            
